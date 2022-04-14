@@ -1,3 +1,4 @@
+//LinkedList implementation in Js
 class LinkedList {
   constructor(value) {
     this.head = {
