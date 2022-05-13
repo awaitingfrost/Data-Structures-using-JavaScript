@@ -1,3 +1,4 @@
+// CHECKING THE INDEX VALUE of an given Array.
 class Myarray {
     constructor(data){
         
