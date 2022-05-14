@@ -16,19 +16,33 @@ class Stack {
     var newNode = new Node(value);
     if (!this.first) {
       this.first = newNode;
-      this.tail = newNode;
+      this.last = newNode;
     } else {
-      var temp = this.first;
+      const temp = this.first;
       this.first = newNode;
-      this.first.next = temp;
+      this.last = temp;
     }
     return ++this.size;
+  }
+
+  pop() {
+    if (!this.first) {
+      return null;
+    }
+
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    this.first = this.first.next;
+    this.length--;
+    return this;
   }
 }
 
 var stack = new Stack();
 stack.push("sagar");
 stack.push("subedi");
+stack.pop();
 
 //time complexity for push O(1)
 // time complexity for pop O(1)
